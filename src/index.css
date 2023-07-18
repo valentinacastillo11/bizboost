@@ -1,3 +1,4 @@
+/* Global */
 :root {
   --gradient-start: #1b3385;
   --gradient-end: #25c5c9;
@@ -182,12 +183,6 @@ a:hover {
   padding: 0 16px;
 }
 
-/*.main section {
-  width: 760px;
-  margin: 0 auto;
-  text-align: center;
-}*/
-
 /* main */
 .main-box {
   width: 740px;
@@ -222,6 +217,7 @@ a:hover {
   font-size: 0.9em;
   line-height: 1.404em;
   text-transform: capitalize;
+  transform: translateX(380%);
 }
 
 .video-box {
