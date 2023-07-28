@@ -1,0 +1,484 @@
+/*=======================================
+    #Variables
+=========================================*/
+
+/**
+  TABLE OF CONTENTS
+
+  COLORS
+  Brand colors............................These are the main brand colors.
+  Neutral colors..........................White and black, gray sacale, secondary colors.
+  Utility colors..........................Other colors to represent states: info, warning, sucess, etc.
+
+  TYPOGRAPHY
+  Font famillies..........................The fonts used in the design system.
+  Font weights............................Font weights
+  Sizes...................................Font sizing for body text, paragraphs, inputs
+  Heading sizes...........................Font sizing for page headings
+
+  BREAKPOINTS
+  Breakpoints.............................Global responsive breakpoints definitions
+*/
+
+:root {
+  /*=======================================
+    COLORS
+  =========================================*/
+
+  /*=========================
+    Brand Colors
+  ==========================*/
+  --primary: #2292b1;
+  --gradient-start: #1b3385;
+  --gradient-end: #25c5c9;
+
+  /*=========================
+    Neutral Colors
+  ==========================*/
+  --background: #0a0c11;
+  --body-text: #abadb3;
+  --border-color: #323438;
+  --sub-menu-bg: #222;
+  --white: #fff;
+
+  /*=========================
+    Utility Colors
+  ==========================*/
+
+  /*=======================================
+    TYPOGRAPHY
+  =========================================*/
+  /* 
+    1. The Poppins font. This is the main font.
+    https://fonts.googleapis.com/css?family=Poppins
+
+    2. The Courier font. This is used for <pre> code.
+    https://fonts.googleapis.com/css?family=Poppins
+  */
+
+  /*=========================
+    Font famillies
+  ==========================*/
+  --primary-font: "Poppins";
+
+  /*=========================
+  Font weights
+  ==========================*/
+  --thin: 100;
+  --extra-light: 200;
+  --light: 300;
+  --normal: 400;
+  --medium: 500;
+  --semi-bold: 600;
+  --bold: 700;
+  --extra-bold: 800;
+  --heavy: 900;
+
+  /*=========================
+  Sizes
+  ==========================*/
+  --base-font: 20px;
+}
+
+/*=======================================
+    RESETS
+=========================================*/
+body {
+  box-sizing: border-box;
+  font-family: var(--primary-font);
+  font-size: var(--base-font);
+  color: var(--body-text);
+  background: var(--background);
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/*=========================
+  Heading Sizes
+==========================*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--primary-font);
+  font-weight: var(--medium);
+  color: var(--white);
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.1em;
+  line-height: 1.72em;
+}
+
+h2 {
+  font-size: 1.6em;
+  line-height: 1.29em;
+  text-transform: capitalize;
+  margin-top: 14px;
+}
+
+h3 {
+  font-size: 1.6em;
+  font-weight: var(--bold);
+}
+
+h4,
+h5 {
+  font-weight: var(--bold);
+}
+
+h6 {
+  font-weight: var(--semi-bold);
+  font-size: 16px;
+  color: var(--body-text);
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+}
+
+ul li {
+  position: relative;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  color: var(--body-text);
+  text-decoration: none;
+  font-size: 0.9em;
+  font-style: normal;
+  font-weight: var(--normal);
+  line-height: 2.4em;
+  text-transform: capitalize;
+}
+
+a:hover,
+.logo h2:hover {
+  color: var(--primary);
+}
+
+.lowlight {
+  opacity: 0.5;
+}
+
+.gradient-button {
+  padding: 15px 34.86px 16.08px 35px;
+  display: inline-block;
+  margin-top: 14px;
+  color: var(--white);
+  border-radius: 30px;
+  font-size: 0.9em;
+  font-weight: var(--bold);
+  line-height: 1.6em;
+  background: linear-gradient(
+    90deg,
+    var(--gradient-start) 0%,
+    var(--gradient-end) 100%
+  );
+}
+
+.gradient-button:hover {
+  background: var(--white);
+  color: var(--background);
+}
+
+/*=======================================
+    Mobile First
+=========================================*/
+.blocks {
+  padding: 0 30px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  flex: 3;
+}
+
+.mobile {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mobile img {
+  width: 16px;
+}
+
+.desktop {
+  display: none;
+}
+
+.submenu {
+  display: none;
+}
+
+.social {
+  flex: 3;
+  display: flex;
+  justify-content: center;
+}
+
+.social ul {
+  column-gap: 25px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 42px 0;
+  margin: 0 auto;
+}
+
+main > * {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-tagline {
+  margin-top: 24px;
+}
+
+.hero-cta {
+  margin-top: 14px;
+}
+
+.hero-video video {
+  width: 100%;
+  max-width: 100%;
+  max-height: 600px;
+  object-fit: cover;
+}
+
+/* .our-services *,
+.big-numbers * {
+  border: 1px solid var(--body-text);
+} */
+
+.our-services {
+  margin: 42px 0;
+}
+
+.big-numbers {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 42px;
+}
+
+.number-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.number-box > * {
+  display: flex;
+  justify-content: center;
+}
+
+/*=======================================
+    TABLET & DESKTOP BREAKPOINTS
+=========================================*/
+@media all and (min-width: 479px) and (max-width: 1280px) {
+}
+
+@media all and (min-width: 479px) {
+  .selected {
+    color: var(--primary);
+  }
+
+  .circle {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    position: absolute;
+    left: -11px;
+    top: -2px;
+  }
+
+  .circle:hover {
+    background: rgba(255, 255, 255, 0.25);
+  }
+
+  .blocks {
+    padding: 0 88px;
+  }
+
+  .hero {
+    padding: 0 85px;
+  }
+
+  .logo {
+    flex: 1;
+  }
+
+  .logo h2 {
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+  }
+
+  .desktop ul {
+    column-gap: 35px;
+  }
+
+  .desktop ul li:nth-child(2) img {
+    width: 16px;
+  }
+
+  .desktop ul li {
+    position: relative;
+  }
+
+  .desktop ul li:nth-child(2):hover .submenu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .submenu {
+    width: 230px;
+    background-color: var(--sub-menu-bg);
+    z-index: 99;
+  }
+
+  .submenu li {
+    min-width: 100%;
+    padding-left: 20px;
+    border: 1px solid var(--border-color);
+  }
+
+  .submenu li:hover {
+    padding-left: 30px;
+  }
+
+  .social {
+    flex: 1;
+  }
+
+  h1 {
+    font-size: 4em;
+    line-height: 1.72em;
+  }
+
+  h3 {
+    font-size: 2.27em;
+  }
+
+  main {
+    max-width: 760px;
+    /* padding: 70px 320px; */
+  }
+
+  .our-services {
+    display: flex;
+    margin: 131px 0;
+  }
+
+  .big-numbers {
+    flex-direction: row;
+    gap: 40px;
+    padding: 0 80px;
+    margin-bottom: 131px;
+  }
+
+  .services-figure img {
+  }
+
+  .big-numbers > * {
+    flex: 1;
+  }
+
+  .our-services > * {
+    flex: 1;
+  }
+  .our-services-layout {
+    padding: 0 12%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+}
+* .what-we-do {
+  border-color: gray;
+}
+*/ .what-we-do .headings {
+  text-align: center;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--border-color);
+  padding: 42px;
+}
+
+.box img {
+  width: 100%;
+}
+
+.box h4 {
+  margin: 24px 0;
+}
+
+.box a {
+  font-size: 0.8em;
+  color: var(--body-text);
+  position: relative;
+  margin-top: 36px;
+}
+
+.box a:after {
+  content: "";
+  border-bottom: 2px solid var(--primary);
+  position: absolute;
+  width: 84px;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  transition: all 0.5s ease;
+}
+
+.what-we-do .grid {
+  display: flex;
+  gap: 1.5em;
+  margin: 77px 0;
+}
+
+.what-we-do .grid * {
+  flex: 1;
+  display: flex;
+}

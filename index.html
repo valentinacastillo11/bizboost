@@ -3,79 +3,84 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" />
+    <title>BizBoost Mobile First</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" />
-    <link rel="stylesheet" href="index.css" />
-
-    <title>Bizboost</title>
+    <link rel="stylesheet" href="src/index.css" />
   </head>
   <body>
-    <div class="blocks">
+    <!-- hero -->
+    <section class="blocks">
       <section class="hero">
-        <div class="inner-container">
-          <header>
-            <div class="logo">
-              <a href="/">
-                <h2>BizBoost</h2>
-              </a>
-            </div>
-            <div class="navigation">
-              <nav class="nav-mobile">
-                <a href="#">
-                  <img src="/src/img/_= Menu icon.svg" width="28px" alt="navigation" />
-                </a>
-                <div class="nav-panel"></div>
-              </nav>
-              <nav class="nav-desktop">
-                <ul>
-                  <li><a href="/" class="selected">Home</a></li>
+        <header>
+          <div class="logo">
+            <a href="/">
+              <h2>BizBoost</h2>
+            </a>
+          </div>
+          <nav class="mobile">
+            <img src="/src/img/_= Menu icon.svg" alt="" />
+          </nav>
+          <nav class="desktop">
+            <ul>
+              <li>
+                <a href="#" class="selected">Home</a>
+              </li>
+              <li>
+                <a href="#">Templates</a>
+                <img src="/src/img/_= Menu icon.svg" alt="arrow" />
+                <ul class="submenu">
                   <li>
-                    <a href="#">
-                      Templates
-                      <img src="/src/img/Vector (3).svg" alt="arrow" />
-                    </a>
-                    <ul class="sub-menu">
-                      <li>
-                        <a href="#">Right Sidebar</a>
-                      </li>
-                      <li>
-                        <a href="#">No Sidebar</a>
-                      </li>
-                      <li>
-                        <a href="#">Style Guide</a>
-                      </li>
-                    </ul>
+                    <a href="#">Right Sidebar</a>
                   </li>
-                  <li><a href="#">Blog</a></li>
-                  <li><a href="#">Contact</a></li>
+                  <li>
+                    <a href="#">No Sidebar</a>
+                  </li>
+                  <li>
+                    <a href="#">Style Guide</a>
+                  </li>
                 </ul>
-              </nav>
-            </div>
-            <div class="social-links">
-              <ul>
-                <li>
-                  <div class="circle"></div>
-                  <a href="#"><img src="/src/img/facebook.svg" alt="facebook" /></a>
-                </li>
-                <li>
-                  <div class="circle"></div>
-                  <a href="#"><img src="/src/img/Vector (4).svg" alt="twitter" /></a>
-                </li>
-                <li>
-                  <div class="circle"></div>
-                  <a href="#"><img src="/src/img/Vector (5).svg" alt="In" /></a>
-                </li>
-              </ul>
-            </div>
-          </header>
+              </li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="social">
+            <ul>
+              <li>
+                <div class="circle"></div>
+                <a href="#">
+                  <img src="src/img/facebook.svg" alt="facebook" />
+                </a>
+              </li>
+              <li>
+                <div class="circle"></div>
+                <a href="#">
+                  <img src="/src/img/Vector (4).svg" alt="twitter" />
+                </a>
+              </li>
+              <li>
+                <div class="circle"></div>
+                <a href="#">
+                  <img src="/src/img/Vector (5).svg" alt="In" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </header>
 
+        <section class="main">
           <main>
-            <h1>We <span class="lowlight">build</span> digital experiences.</h1>
-            <p>We collaborate with smart and creative people to build awesome WordPress Full Site Editing Themes.</p>
-            <a href="#" class="gradient-button">get started</a>
+            <div class="hero-title">
+              <h1>We <span class="lowlight">build</span> digital experiences.</h1>
+            </div>
+            <div class="hero-tagline">
+              We collaborate with smart and creative people to build awesome WordPress Full Site Editing Themes.
+            </div>
+            <div class="hero-cta">
+              <a href="#" class="gradient-button">get started</a>
+            </div>
           </main>
-
-          <div class="video-container">
+          <div class="hero-video">
             <figure>
               <video
                 src="https://fse.catchthemes.com/bizboost-free/wp-content/themes/bizboost/assets/video/video-featured.mp4"
@@ -86,63 +91,65 @@
               </video>
             </figure>
           </div>
-        </div>
+        </section>
       </section>
+    </section>
+          <!-- Our Services  -->
 
-
-    <!-- our services  -->
-
-    <section class="our-services">
-      <div class="inner-container">
-        <div class="container">
-          <div class="image-holder">
-            <figure>
-              <img src="/src/img/hero-content (1).png" alt="computer" />
-            </figure>
-          </div>
-          <aside>
-            <h6 class="subtitle">OUR SERVICES</h6>
-            <h2 class="section-title">we solve creative delusions efficiently</h2>
-            <p>
-              The display employs new techniques and technology to precisely follow the curves of the design, all the
-              way to the elegantly rounded corners.
-            </p>
-            <a href="#" class="gradient-button">get started</a>
-          </aside>
-        </div>
-      </div>
-      <section class="big-numbers">
-        <div class="inner-container">
-          <div class="container">
+          <section class="our-services">
+            <div class="services-figure">
+              <img src="/src/img/hero-content (1).png" alt="computer">
+            </div>
+            <div class="our-services-layout">
+              <div class="headings">
+                <h6>OUR SERVICES</h6>
+                <h2>We solve creative
+                  delusions efficiently</h2>
+              </div>
+              <p>The display employs new techniques and technology to
+                precisely follow the curves of the design, all the way to the
+                elegantly rounded corners.</p>
+              <div class="our-services-cta">
+                <a href="#" class="gradient-button">Get Started</a>
+              </div>
+            </div>
+          </section>
+          <section class="big-numbers">
             <div class="number-box">
-              <h2>95</h2>
+              <span class="number">
+                <h3>95</h3>
+              </span>
               <p>Projects Completed</p>
             </div>
             <div class="number-box">
-              <h2>2310</h2>
+              <span class="number">
+                <h3>2310</h3>
+              </span>
               <p>Happy Clients</p>
             </div>
             <div class="number-box">
-              <h2>215</h2>
-              <p>Hours Spent</p>
+              <span class="number">
+                <h3>215</h3>
+              </span>
+              <p>Hours Spents</p>
             </div>
             <div class="number-box">
-              <h2>479</h2>
+              <span class="number">
+                <h3>479</h3>
+              </span>
               <p>Members</p>
             </div>
-          </div>
-        </div>
-      </section>
-    </section>
-    <!-- featured content-->
+          </section>
+    
+        <!-- featured content-->
+        
     <section class="what-we-do">
-      <div class="inner-container">
-        <div class="headings">
-          <h6 class="subtitle">what we do</h6>
-          <h2 class="section-title">featured content</h2>
+      <div class="box-wwd">
+          <h6>What We Do</h6>
+          <h2>featured content</h2>
         </div>
-        <div class="grid">
-          <div class="box">
+        <div class="box-imgs">
+          <div class="img-1">
             <figure>
               <img src="/src/img/featured-content-1 (1).png" alt="creative-lights" />
             </figure>
@@ -171,9 +178,5 @@
         </div>
       </div>
     </section>
-
-</body>
-</html>
-
-    
-    
+  </body>
+</html
