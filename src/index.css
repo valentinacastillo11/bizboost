@@ -1,69 +1,13 @@
-/*=======================================
-    #Variables
-=========================================*/
-
-/**
-  TABLE OF CONTENTS
-
-  COLORS
-  Brand colors............................These are the main brand colors.
-  Neutral colors..........................White and black, gray sacale, secondary colors.
-  Utility colors..........................Other colors to represent states: info, warning, sucess, etc.
-
-  TYPOGRAPHY
-  Font famillies..........................The fonts used in the design system.
-  Font weights............................Font weights
-  Sizes...................................Font sizing for body text, paragraphs, inputs
-  Heading sizes...........................Font sizing for page headings
-
-  BREAKPOINTS
-  Breakpoints.............................Global responsive breakpoints definitions
-*/
-
 :root {
-  /*=======================================
-    COLORS
-  =========================================*/
-
-  /*=========================
-    Brand Colors
-  ==========================*/
   --primary: #2292b1;
   --gradient-start: #1b3385;
   --gradient-end: #25c5c9;
-
-  /*=========================
-    Neutral Colors
-  ==========================*/
   --background: #0a0c11;
   --body-text: #abadb3;
   --border-color: #323438;
   --sub-menu-bg: #222;
   --white: #fff;
-
-  /*=========================
-    Utility Colors
-  ==========================*/
-
-  /*=======================================
-    TYPOGRAPHY
-  =========================================*/
-  /* 
-    1. The Poppins font. This is the main font.
-    https://fonts.googleapis.com/css?family=Poppins
-
-    2. The Courier font. This is used for <pre> code.
-    https://fonts.googleapis.com/css?family=Poppins
-  */
-
-  /*=========================
-    Font famillies
-  ==========================*/
   --primary-font: "Poppins";
-
-  /*=========================
-  Font weights
-  ==========================*/
   --thin: 100;
   --extra-light: 200;
   --light: 300;
@@ -73,16 +17,9 @@
   --bold: 700;
   --extra-bold: 800;
   --heavy: 900;
-
-  /*=========================
-  Sizes
-  ==========================*/
   --base-font: 20px;
 }
 
-/*=======================================
-    RESETS
-=========================================*/
 body {
   box-sizing: border-box;
   font-family: var(--primary-font);
@@ -99,9 +36,6 @@ body {
   box-sizing: inherit;
 }
 
-/*=========================
-  Heading Sizes
-==========================*/
 h1,
 h2,
 h3,
@@ -201,9 +135,6 @@ a:hover,
   color: var(--background);
 }
 
-/*=======================================
-    Mobile First
-=========================================*/
 .blocks {
   padding: 0 30px;
 }
@@ -273,10 +204,7 @@ main > * {
   object-fit: cover;
 }
 
-/* .our-services *,
-.big-numbers * {
-  border: 1px solid var(--body-text);
-} */
+/* services */
 
 .our-services {
   margin: 42px 0;
@@ -299,9 +227,6 @@ main > * {
   justify-content: center;
 }
 
-/*=======================================
-    TABLET & DESKTOP BREAKPOINTS
-=========================================*/
 @media all and (min-width: 479px) and (max-width: 1280px) {
 }
 
@@ -399,7 +324,6 @@ main > * {
 
   main {
     max-width: 760px;
-    /* padding: 70px 320px; */
   }
 
   .our-services {
@@ -412,9 +336,6 @@ main > * {
     gap: 40px;
     padding: 0 80px;
     margin-bottom: 131px;
-  }
-
-  .services-figure img {
   }
 
   .big-numbers > * {
@@ -432,53 +353,53 @@ main > * {
     justify-content: center;
   }
 }
-* .what-we-do {
-  border-color: gray;
-}
-*/ .what-we-do .headings {
-  text-align: center;
-}
 
-.box {
+/* what we do  */
+
+what-we-do {
+  border: dashed 3px white;
+  max-width: 1400px;
+  margin: 0 auto;
+  margin-top: 143px;
+}
+.what-we-do h6 {
+  font-size: 1em;
+}
+.what-we-do h2 {
+  line-height: 1.29;
+  text-transform: capitalize;
+  font-size: var(--heading-two);
+  margin-top: 14px;
+  margin-bottom: 54px;
+}
+.box-wwd {
+  border: dashed 3px green;
+  max-width: 1400px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+}
+.box-imgs {
+  border: dashed 3px red;
+  max-width: 1400px;
+  display: flex;
+  flex: 1;
+  gap: 40px;
+}
+.img-1,
+.img-2,
+.img-3 {
+  border: solid 1px var(--primary-text-color);
   display: flex;
   flex-direction: column;
-  border: 2px solid var(--border-color);
-  padding: 42px;
+  align-items: center;
 }
 
-.box img {
-  width: 100%;
-}
-
-.box h4 {
-  margin: 24px 0;
-}
-
-.box a {
-  font-size: 0.8em;
-  color: var(--body-text);
-  position: relative;
-  margin-top: 36px;
-}
-
-.box a:after {
-  content: "";
-  border-bottom: 2px solid var(--primary);
-  position: absolute;
-  width: 84px;
-  height: 2px;
-  left: 0;
-  bottom: 0;
-  transition: all 0.5s ease;
-}
-
-.what-we-do .grid {
-  display: flex;
-  gap: 1.5em;
-  margin: 77px 0;
-}
-
-.what-we-do .grid * {
-  flex: 1;
-  display: flex;
+.img-1 img,
+.img-2 img,
+.img-3 img {
+  width: 352.02px;
+  height: 234.52px;
+  /* flex-shrink: 0; */
 }
